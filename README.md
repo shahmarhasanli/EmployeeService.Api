@@ -3,7 +3,7 @@
 Orchestrated Saga example with:
 - .Net 6
 - EntityFrameWorkCore
-- In Memory-by default/Sql Service
+- In Memory-by default/Ms Sql
 
 
 ## Running this project
