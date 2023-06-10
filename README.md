@@ -1,6 +1,5 @@
 # Employee Service Api
 
-Orchestrated Saga example with:
 - .Net 6
 - EntityFrameWorkCore
 - In Memory-by default/Ms Sql
