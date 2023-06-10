@@ -12,22 +12,9 @@ namespace EmployeeService.Infrastructure.Data.Repositories
         {
         }
 
-        public async Task<List<EmployeeDto>> GetAllAsync(CancellationToken cancellationToken)
+        public async Task<List<Employee>> GetAllAsync(CancellationToken cancellationToken)
         {
             return await Set.Where(a=>a.IsActive && !a.Deleted)
-                .Select(e=> 
-                        new EmployeeDto()
-                        {
-                            Id = e.Id,
-                            Name = e.Name,
-                            Surname = e.Surname,
-                            BirthDate = e.BirthDate,
-                            DepartmentId = e.DepartmentId,
-                            CreatedDateTime = e.CreatedDateTime,
-                            Deleted = e.Deleted,
-                            IsActive = e.IsActive,
-                            UpdatedDateTime = e.UpdatedDateTime
-                        })
                         .ToListAsync(cancellationToken);
         }
 
